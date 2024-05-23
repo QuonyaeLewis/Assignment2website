@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="indexhomepage.html">Home</a>
+        <a href="computerpage.html">Computers</a>
+        <a href="mobilephonespage.html">Mobile Phones</main></a>
+        <a href="laptopspage.html">Tablets</a>
+        <a href="Aboutuspage.html">About Us</a>
+        <a href="contactuspage.html">Contact Us</a>
+        <a href="feedbackpage.html">Feedback</a>
+    </div>
+    <style>
+        div.a {
+          text-align: center;
+        }
+        </style>
+        
+        <div class="a">
+            <h1>ELCTRONICA FEEDBACK PAGE</h1>
+    <section class="container5">
+        <h2>SHARE YOUR FEEDBACK OF OUR SERVICES</h2><br>  
+        <P>So we can provide a better customer experience!</P>  
+    </section>
+    <div class="form-container">
+        <form name="feedbackForm" onsubmit="return validateForm()" method="post">
+            <label for="email"> Enter Your Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="fullName">Enter Your Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <label for="f1">How often do you use our website in a week?</label>
+            <input type="text" id="f1" name="f1" required>
+            <label for="f2">What is your most viewed webpage?</label>
+            <input type="text" id="f2" name="f2" required>
+            <label for="message">What products would you like us to sell the most which is currently not available?</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var firstName = document.forms["feedbackForm"]["fullName"].value;
+            var email = document.forms["feedbackForm"]["email"].value;
+            var message = document.forms["feedbackForm"]["message"].value;
+
+            if (/[^a-zA-Z -]/.test(fullName)) {
+                alert("Full Name should not have numbers or special characters.");
+                return false;
+            }
+    
+            // Validate email format
+            if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+                alert("Invalid Email Address!");
+                return false;
+            }
+            alert("Message has been sent successfully!");
+            window.location.href ='indexhome.html';
+            return false; 
+        }
+    </script>
+    </div>
+    </div>
+    <footer>
+        <p>All rights reserved by Electronica.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+

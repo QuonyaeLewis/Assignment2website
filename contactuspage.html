@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="indexhomepage.html">Home</a>
+        <a href="computerpage.html">Computers</a>
+        <a href="mobilephonespage.html">Mobile Phones</main></a>
+        <a href="laptopspage.html">Tablets</a>
+        <a href="Aboutuspage.html">About Us</a>
+        <a href="contactuspage.html">Contact Us</a>
+        <a href="feedbackpage.html">Feedback</a>
+    </div>
+    <style>
+        div.a {
+          text-align: center;
+        }
+        </style>
+        
+        <div class="a">
+            <h1>ELCTRONICA CONTACT US PAGE</h1>
+    <section class="container5">
+        <h2>SUBMIT A REQUEST</h2><br>    
+    </section>
+    <div class="form-container">
+        <form name="feedbackForm" onsubmit="return validateForm()" method="post">
+            <label for="email">Your Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="problemsolving">How can we help you today?</label>
+            <input type="text" id="problemsolving" name="problemsolving" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Description:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var firstName = document.forms["feedbackForm"]["firstName"].value;
+            var lastName = document.forms["feedbackForm"]["lastName"].value;
+            var email = document.forms["feedbackForm"]["email"].value;
+            var message = document.forms["feedbackForm"]["message"].value;
+    
+            if (/[^a-zA-Z -]/.test(firstName) || /[^a-zA-Z -]/.test(lastName)) {
+                alert("Fisrt Name or Last Name should not have numbers or special characters.");
+                return false;
+            }
+    
+            // Validate email format
+            if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+                alert("Invalid Email Address!");
+                return false;
+            }
+            alert("Message has been sent successfully!");
+            window.location.href ='indexhome.html';
+            return false; 
+        }
+    </script>
+    </div>
+    
+<footer>
+    <p>All rights reserved by Electronica.</p>
+    </footer>        
+    </body>
+     </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
